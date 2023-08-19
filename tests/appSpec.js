@@ -18,7 +18,7 @@ describe("Creating players", function () {
   });
 
   it("should create equal number of players for \
-    given players name", function () {
+    given players Name", function () {
     let players = initPlayers(TEST_PLAYERS);
     let expectedLength = TEST_PLAYERS.length;
 
@@ -29,10 +29,10 @@ describe("Creating players", function () {
     ", function () {
     let players = initPlayers(TEST_PLAYERS);
     let keys = Object.keys(players[0]);
-    let found = keys.findIndex(k => k == 'name');
+    let found = keys.findIndex(k => k == 'Name');
 
     expect(found).toBeGreaterThan(-1);
-    expect(players[0].name).toBeInstanceOf(String);
+    expect(players[0].Name).toBeInstanceOf(String);
   });
 
   it("should create player with a valid image url \
@@ -94,7 +94,7 @@ describe("Building player blocks", function () {
     let expectedFragment = `
     <div class="player">
         <img src="${players[0].image}" alt="">
-        <div class="name">${players[0].name}</div>
+        <div class="name">${players[0].Name}</div>
         <div class="strength">${players[0].strength}</div>
     </div>`;
     expectedFragment = expectedFragment.replace(/\s/g, "");
